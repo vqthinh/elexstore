@@ -20,5 +20,5 @@ $file = 'frontend/controllers/'.$controller.'/'.$action.'.php';
 if (file_exists($file)) {
     require_once($file);
 } else {
-    require_once(base_url('404.php'));
+    header('Location: '.base_url('404.php'));
 }

@@ -1,14 +1,23 @@
 <?php include_once('frontend/views/common/header.php'); ?>
 <style>
     .img1 {
-        max-width: 227px;
-        max-height: 227px;
-        height: 227px;
-        width: 227px;
+        max-width: 220px;
+        max-height: 220px;
+        height: 220px;
+        width: 220px;
+    }
+    .img2 {
+        max-width: 90px;
+        max-height: 90px;
+        height: 90px;
+        width: 90px;
     }
     .logo {
         max-height: 200px;
         max-width: 200px;
+    }
+    .product-hover a {
+    font-size: 11px;
     }
 </style>
 <div class="slider-area">
@@ -139,16 +148,16 @@
                                 <img src="assets/upload/images/Products/<?php echo $special['Image'];?>" class="img1" alt="">
                                 <div class="product-hover">
                                     <a href="javascript:void(0);" class="add-to-cart-link add-to-cart"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                    <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                    <a href="index.php?controller=product&action=details&pid=<?php echo $special['ID']; ?>" class="view-details-link"><i class="fa fa-link"></i> See details</a>
                                 </div>
                             </div>
 
                             <h2>
-                                <a href="#"><?php echo $special['Name'];?></a>
+                                <a href="index.php?controller=product&action=details&pid=<?php echo $special['ID']; ?>"><?php echo $special['Name'];?></a>
                             </h2>
 
                             <div class="product-carousel-price">
-                                <ins><?php echo $special['Price'];?><span style="font-weight: bold;font-size: 9px;color:red"> VNĐ</span></ins>
+                                <ins><?php echo $special['Price'];?><span style="font-weight: bold;font-size: 9px;color:red"> USD</span></ins>
                             </div>
                         </div>
 <?php endforeach;?>
@@ -179,78 +188,73 @@
 
 <div class="product-widget-area">
     <div class="zigzag-bottom"></div>
-<!--    <div class="container">-->
-<!--        <div class="row">-->
-<!--            <div class="col-md-4">-->
-<!--                <div class="single-product-widget">-->
-<!--                    <h2 class="product-wid-title">Top Sellers</h2>-->
-<!--                    <a href="" class="wid-view-more">View All</a>-->
-<!--                    @foreach (Product product in ViewBag.TopSells)-->
-<!--                    {-->
-<!--                    <div class="single-wid-product">-->
-<!--                        <a href="@Url.Action("Details","Products")/@product.ID"><img src="/Data/Images/images/@product.Image" alt="" class="product-thumb"></a>-->
-<!--                        <h2><a href="@Url.Action("Details","Products")/@product.ID">@product.Name</a></h2>-->
-<!--                        <div class="product-wid-rating">-->
-<!--                            <i class="fa fa-star"></i>-->
-<!--                            <i class="fa fa-star"></i>-->
-<!--                            <i class="fa fa-star"></i>-->
-<!--                            <i class="fa fa-star"></i>-->
-<!--                            <i class="fa fa-star"></i>-->
-<!--                        </div>-->
-<!--                        <div class="product-wid-price">-->
-<!--                            <ins>@product.Price<span style="font-weight: bold;font-size: 9px;color:red"> VNĐ</span></ins> <del>@product.Price<span style="font-weight: bold;font-size: 9px;color:red"> VNĐ</span></del>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    }-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="col-md-4">-->
-<!--                <div class="single-product-widget">-->
-<!--                    <h2 class="product-wid-title">Top Views</h2>-->
-<!--                    <a href="#" class="wid-view-more">View All</a>-->
-<!--                    @foreach (Product product in ViewBag.TopViews)-->
-<!--                    {-->
-<!--                    <div class="single-wid-product">-->
-<!--                        <a href="@Url.Action("Details","Products")/@product.ID"><img src="/Data/Images/images/@product.Image" alt="" class="product-thumb"></a>-->
-<!--                        <h2><a href="@Url.Action("Details","Products")/@product.ID">@product.Name</a></h2>-->
-<!--                        <div class="product-wid-rating">-->
-<!--                            <i class="fa fa-star"></i>-->
-<!--                            <i class="fa fa-star"></i>-->
-<!--                            <i class="fa fa-star"></i>-->
-<!--                            <i class="fa fa-star"></i>-->
-<!--                            <i class="fa fa-star"></i>-->
-<!--                        </div>-->
-<!--                        <div class="product-wid-price">-->
-<!--                            <ins>@product.Price<span style="font-weight: bold;font-size: 9px;color:red"> VNĐ</span></ins> <del>@product.Price<span style="font-weight: bold;font-size: 9px;color:red"> VNĐ</span></del>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    }-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="col-md-4">-->
-<!--                <div class="single-product-widget">-->
-<!--                    <h2 class="product-wid-title">Top New</h2>-->
-<!--                    <a href="#" class="wid-view-more">View All</a>-->
-<!--                    @foreach (Product product in ViewBag.News)-->
-<!--                    {-->
-<!--                    <div class="single-wid-product">-->
-<!--                        <a href="@Url.Action("Details","Products")/@product.ID"><img src="/Data/Images/images/@product.Image" alt="" class="product-thumb"></a>-->
-<!--                        <h2><a href="@Url.Action("Details","Products")/@product.ID">@product.Name</a></h2>-->
-<!--                        <div class="product-wid-rating">-->
-<!--                            <i class="fa fa-star"></i>-->
-<!--                            <i class="fa fa-star"></i>-->
-<!--                            <i class="fa fa-star"></i>-->
-<!--                            <i class="fa fa-star"></i>-->
-<!--                            <i class="fa fa-star"></i>-->
-<!--                        </div>-->
-<!--                        <div class="product-wid-price">-->
-<!--                            <ins>@product.Price<span style="font-weight: bold;font-size: 9px;color:red"> VNĐ</span></ins> <del>@product.Price<span style="font-weight: bold;font-size: 9px;color:red"> VNĐ</span></del>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    }-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="single-product-widget">
+                    <h2 class="product-wid-title">Top Sellers</h2>
+<?php foreach($listTopSells as $product): ?>
+                    <div class="single-wid-product">
+                        <a href="#"><img src="assets/upload/images/Products/<?php echo $product['Image'];?>" alt="" class="product-thumb img2"></a>
+                        <h2><a href="index.php?controller=product&action=details&pid=<?php echo $product['ID']; ?>"><?php echo $product['Name'];?></a></h2>
+                        <div class="product-wid-rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <div class="product-wid-price">
+                            <ins><?php echo $product['Price'];?><span style="font-weight: bold;font-size: 9px;color:red"> USD</span></ins>
+                        </div>
+                    </div>
+<?php endforeach;?>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="single-product-widget">
+                    <h2 class="product-wid-title">Top Views</h2>
+                    <?php foreach($listTopViews as $product): ?>
+                        <div class="single-wid-product">
+                            <a href="#"><img src="assets/upload/images/Products/<?php echo $product['Image'];?>" alt="" class="product-thumb img2"></a>
+                            <h2><a href="index.php?controller=product&action=details&pid=<?php echo $product['ID']; ?>"><?php echo $product['Name'];?></a></h2>
+                            <div class="product-wid-rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <div class="product-wid-price">
+                                <ins><?php echo $product['Price'];?><span style="font-weight: bold;font-size: 9px;color:red"> USD</span></ins>
+                            </div>
+                        </div>
+                    <?php endforeach;?>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="single-product-widget">
+                    <h2 class="product-wid-title">Top New</h2>
+                    <?php foreach($listTopNews as $product): ?>
+                        <div class="single-wid-product">
+                            <a href="#"><img src="assets/upload/images/Products/<?php echo $product['Image'];?>" alt="" class="product-thumb img2"></a>
+                            <h2><a href="index.php?controller=product&action=details&pid=<?php echo $product['ID']; ?>"><?php echo $product['Name'];?></a></h2>
+                            <div class="product-wid-rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <div class="product-wid-price">
+                                <ins><?php echo $product['Price'];?><span style="font-weight: bold;font-size: 9px;color:red"> USD</span></ins>
+                            </div>
+                        </div>
+                    <?php endforeach;?>
+                </div>
+            </div>
+        </div>
     </div>
-<!--</div> <!-- End product widget area-->
+</div>
+</div>
 <?php include_once('frontend/views/common/footer.php'); ?>

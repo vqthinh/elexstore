@@ -1,6 +1,4 @@
-<?php?>
-
- */<html>
+<html>
 <head>
 
 </head>
