@@ -32,7 +32,7 @@
                             <input type="text" class="form-control" id="txtImage" name="Image" value="<?php echo $product ? $product['Image'] : ''; ?>"/>
                             <?php if($product){
                                 echo ' <div class="img-responsive" style = "padding-top: 5px" >
-                            <img id = "img" src = "assets/upload/images/'.$product["Image"].'" style = "width: 200px; height: 160px;" />
+                            <img id = "img" src = "assets/upload/images/Products/'.$product["Image"].'" style = "width: 200px; height: 160px;" />
                         </div >';
                             }else {
                                 echo ' <div class="img-responsive" style = "padding-top: 5px" >

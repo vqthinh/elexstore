@@ -39,7 +39,7 @@
                             <input type="text" class="form-control" id="txtLogo" name="Logo" value="<?php echo $supplier ? $supplier['Logo'] : ''; ?>"/>
                             <?php if($supplier){
                                 echo ' <div class="img-responsive" style = "padding-top: 5px" >
-                            <img id = "logo" src = "assets/upload/images/'.$supplier["Logo"].'" style = "width: 200px; height: 160px;" />
+                            <img id = "logo" src = "assets/upload/images/Suppliers/'.$supplier["Logo"].'" style = "width: 200px; height: 160px;" />
                         </div >';
                             }else {
                                 echo ' <div class="img-responsive" style = "padding-top: 5px" >

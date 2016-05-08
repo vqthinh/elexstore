@@ -5,11 +5,11 @@
             <form>
                 <table class="table table-striped table-bordered table-hover" style="table-layout: fixed">
                     <colgroup>
-                        <col span="1" style="width: 15%;overflow: hidden">
                         <col span="1" style="width: 20%;overflow: hidden">
                         <col span="1" style="width: 20%;overflow: hidden">
-                        <col span="1" style="width: 30%;overflow: hidden">
-                        <col span="1" style="width: 15%;overflow: hidden">
+                        <col span="1" style="width: 20%;overflow: hidden">
+                        <col span="1" style="width: 20%;overflow: hidden">
+                        <col span="1" style="width: 20%;overflow: hidden">
                     </colgroup>
                     <thead>
                     <tr>
@@ -43,7 +43,7 @@
                                 <?php echo $supplier['Phone'];?>
                             </td>
                             <td style="overflow: hidden">
-                                <?php echo $supplier['Logo'];?>
+                                <img src="assets/upload/images/Suppliers/<?php echo $supplier['Logo'];?>" width="50" height="50"/>
                             </td>
                             <td>
                                 <a href="admin.php?controller=supplier&amp;action=edit&amp;cid=<?php echo $supplier['ID'];?>" class="btn btn-warning btn-sm">

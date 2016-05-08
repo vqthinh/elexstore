@@ -24,9 +24,9 @@ function pagination($url, $page, $total){
 
     //first
     if ($page == 1) {
-        $out.= '<li class="disabled"><span>Đầu</span></li>';
+        $out.= '<li class="disabled"><span>First</span></li>';
     } else {
-        $out.='<li><a href="'.$url.'">Đầu</a></li>';
+        $out.='<li><a href="'.$url.'">First</a></li>';
     }
 
     // previous
@@ -59,9 +59,9 @@ function pagination($url, $page, $total){
 
     //last
     if ($page < $total) {
-        $out.= '<li><a href="'.$url.'&amp;page='.$total.'">Cuối</a></li>';
+        $out.= '<li><a href="'.$url.'&amp;page='.$total.'">Last</a></li>';
     } else {
-        $out.= '<li class="disabled"><span>Cuối</span></li>';
+        $out.= '<li class="disabled"><span>Last</span></li>';
     }
 
     $out.= '</ul>';

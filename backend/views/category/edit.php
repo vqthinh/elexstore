@@ -23,7 +23,7 @@
                         <input type="text" class="form-control" id="txtImage" name="Image" value="<?php echo $category ? $category['Image'] : ''; ?>"/>
                         <?php if($category){
                             echo ' <div class="img-responsive" style = "padding-top: 5px" >
-                            <img id = "img" src = "assets/upload/images/'.$category["Image"].'" style = "width: 200px; height: 160px;" />
+                            <img id = "img" src = "assets/upload/images/Categories/'.$category["Image"].'" style = "width: 200px; height: 160px;" />
                         </div >';
                         }else {
                             echo ' <div class="img-responsive" style = "padding-top: 5px" >
@@ -39,7 +39,7 @@
                         <input type="text" class="form-control" id="txtIcon" name="Icon" value="<?php echo $category ? $category['Icon'] : ''; ?>"/>
                         <?php if($category){
                             echo ' <div class="img-responsive" style = "padding-top: 5px" >
-                            <img id = "ico" src = "assets/upload/images/'.$category["Icon"].'" style = "width: 200px; height: 160px;" />
+                            <img id = "ico" src = "assets/upload/images/Categories/'.$category["Icon"].'" style = "width: 200px; height: 160px;" />
                         </div >';
                         }else {
                             echo ' <div class="img-responsive" style = "padding-top: 5px" >

@@ -23,7 +23,7 @@
     <link href="assets/favicon.ico" rel="shortcut icon">
     <link href="assets/apple-touch-icon.png" rel="apple-touch-icon">
 
-    <title>Responsive Admin template based on Bootstrap 3</title>
+    <title>Login</title>
 
 </head>
 

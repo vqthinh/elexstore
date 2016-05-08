@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel='stylesheet' href='assets/backend/layout/css/fullcalendar.css'>
-    <link href="assets/backend/layout">
     <link rel='stylesheet' href='assets/backend/layout/css/datatables/datatables.css'>
     <link rel='stylesheet' href='assets/backend/layout/css/datatables/bootstrap.datatables.css'>
     <link rel='stylesheet' href='assets/backend/layout/scss/chosen.css'>
