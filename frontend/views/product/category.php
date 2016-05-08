@@ -27,7 +27,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4">
-<!--                @{Html.RenderAction("_SearchBox", "Products");}-->
+<?php include_once('frontend/views/common/searchbox.php'); ?>
                 <div class="single-sidebar">
                     <h2 class="sidebar-title">Random Products</h2>
                     <?php foreach($listRandom as $productrd):?>

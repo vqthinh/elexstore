@@ -25,7 +25,7 @@ $categoryprd = get_a_record('categories',$categoryID);
 //list random product
 $optionsRandom = array(
     'order_by' => 'RAND()',
-    'limit' => '5',
+    'limit' => '4',
     'offset' => '0'
 );
 $listRandom = get_all('products',$optionsRandom);
