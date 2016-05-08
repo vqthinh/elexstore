@@ -10,13 +10,13 @@ if (!empty($_POST)) {
         'SupplierID' => intval($_POST['SupplierID']),
         'Name' => escape($_POST['Name']),
         'Price' => floatval($_POST['Price']),
-        'ProductDate' => date("d/m/Y"),
+        'ProductDate' =>  date("y/m/d"),
         'Quantity' => intval($_POST['Quantity']),
-        'Description' => escape($_POST['Description']),
+        'Description' => str_replace("\r\n",'',$_POST['Description']),
         'Image' => escape($_POST['Image']),
         'Sells' => intval(0),
         'Views' => intval(0),
-        'Special' => boolval($_POST['Special'])
+        'Special' => isset($_POST['Special'])?1:0
     );
     save('products', $product);
 
@@ -33,8 +33,10 @@ $user = $_SESSION['user'];
 $product = get_a_record('products', $pid);
 
 $categories = get_all('categories', array(
-    'select'=>'ID,Name',
-    'order_by' => 'position ASC'
+    'select'=>'ID,Name'
+));
+$suppliers = get_all('suppliers', array(
+    'select'=>'ID,Name'
 ));
 
 //load view

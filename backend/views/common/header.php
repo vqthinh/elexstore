@@ -33,8 +33,9 @@
     <script src='assets/backend/layout/js/for_pages/dashboard.js'></script>
     <script src='assets/backend/layout/js/ajaxform.js'></script>
     <script src='assets/Plugins/ckfinder/ckfinder.js'></script>
+    <script src='assets/Plugins/ckeditor/ckeditor.js'></script>
     <script src='assets/Plugins/jsfunction/commonFunc.js'></script>
-    <title>Responsive Admin template based on Bootstrap 3</title>
+    <title><?php echo $title?></title>
 </head>
 <body>
 <div class="all-wrapper">
@@ -58,68 +59,30 @@
                 </div>
                 <ul class="side-menu">
                     <li>
-                        <a href="notifications.html">
-                            <span class="badge badge-notifications pull-right alert-animated">5</span>
-                            <i class="icon-flag"></i> Notifications
+                        <a href="<?php echo base_url("admin.php") ?>">
+                            <span class="badge pull-right">17</span>
+                            <i class="icon-dashboard"></i> Dashboard
                         </a>
                     </li>
                 </ul>
                 <div class="relative-w">
                     <ul class="side-menu side-menu-red">
                         <li>
-                            <a href="index.html">
-                                <span class="badge pull-right">17</span>
-                                <i class="icon-dashboard"></i> Dashboard
-                            </a>
-                        </li>
-                        <li>
-                            <a href="@Url.Action("Index","Categories")">
+                            <a href="<?php echo base_url("admin.php?controller=category") ?>">
                             <span class="badge pull-right"></span>
                             <i class="icon-bar-chart"></i> Categories
                             </a>
                         </li>
                         <li>
-                            <a href="@Url.Action("Index","Suppliers")">
+                            <a href="<?php echo base_url("admin.php?controller=supplier") ?>">
                             <span class="badge pull-right">12</span>
                             <i class="icon-terminal"></i> Suppliers
                             </a>
                         </li>
                         <li>
-                            <a href="@Url.Action("Index","Products")">
+                            <a href="<?php echo base_url("admin.php?controller=product") ?>">
                             <span class="badge pull-right">5</span>
                             <i class="icon-code-fork"></i> Products
-                            </a>
-                        </li>
-                        <li>
-                            <a href="datatable.html" class="is-dropdown-menu">
-                                <span class="badge pull-right">24</span>
-                                <i class="icon-th"></i> Tables
-                            </a>
-                            <ul>
-                                <li>
-                                    <a href="datatable.html">
-                                        <i class="icon-list-alt"></i>
-                                        Data Tables
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="table.html">
-                                        <i class="icon-table"></i>
-                                        Regular Tables
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="calendar.html">
-                                <span class="badge pull-right">11</span>
-                                <i class="icon-calendar"></i> Calendar
-                            </a>
-                        </li>
-                        <li>
-                            <a href="login.html">
-                                <span class="badge pull-right"></span>
-                                <i class="icon-signin"></i> Login Page
                             </a>
                         </li>
                     </ul>
