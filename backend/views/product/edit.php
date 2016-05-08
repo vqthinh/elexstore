@@ -117,7 +117,7 @@
                     <div class="form-group">
                         <label class="col-xs-2 control-label">Views</label>
                         <div class="col-xs-10">
-                            <input type="text" name="Views" class="form-control" id="txtViews" readonly="readonly" value="<?php echo $product ? $product['Views'] : ''; ?>"/>
+                            <input type="text" name="Views" class="form-control" id="txtViews" readonly="readonly" value="<?php echo $product ? $product['Views'] : '0'; ?>"/>
                         </div>
                     </div>
 
@@ -125,7 +125,7 @@
                     <div class="form-group">
                         <label class="col-xs-2 control-label">Sells</label>
                         <div class="col-xs-10">
-                            <input type="text" name="Sells" class="form-control" id="txtSells" readonly="readonly" value="<?php echo $product ? $product['Sells'] : ''; ?>"/>
+                            <input type="text" name="Sells" class="form-control" id="txtSells" readonly="readonly" value="<?php echo $product ? $product['Sells'] : '0'; ?>"/>
                         </div>
                     </div>
 

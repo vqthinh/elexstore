@@ -79,6 +79,11 @@ function get_all($table, $options = array()) {
     return $data;
 }
 
+function increaseViews($pid){
+    $sql = "UPDATE products SET Views=Views+1 WHERE ID=".$pid;
+    mysql_query($sql) or die(mysql_error());
+}
+
 /**
  * Trả về tổng số bản ghi thỏa mãn điều kiện trong $option.
  */

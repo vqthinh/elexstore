@@ -4,7 +4,7 @@
 //data
 $pid = intval($_GET['pid']);
 $product = get_a_record('products', $pid);
-
+increaseViews($pid);
 if (!$product) {
     header('Location: '.base_url('404.php'));
 }

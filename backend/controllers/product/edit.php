@@ -14,8 +14,8 @@ if (!empty($_POST)) {
         'Quantity' => intval($_POST['Quantity']),
         'Description' => str_replace("\r\n",'',$_POST['Description']),
         'Image' => escape($_POST['Image']),
-        'Sells' => intval(0),
-        'Views' => intval(0),
+        'Sells' => intval($_POST['Sells']),
+        'Views' => intval($_POST['Views']),
         'Special' => isset($_POST['Special'])?1:0
     );
     save('products', $product);
